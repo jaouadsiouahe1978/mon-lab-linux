@@ -110,9 +110,9 @@ Je ne suis pas un expert ! Je partage mon apprentissage avec mes erreurs et mes 
 
 ---
 
-**Démarré le :** Décembre 2024  
+**Démarré le :** 30 Novembre 2024  
 **Où j'en suis :** 🟢 Mois 1 - Les fondations  
-**Dernière mise à jour :** $(date +%d/%m/%Y)
+**Dernière mise à jour :** 30/11/2024
 
 ---
 
