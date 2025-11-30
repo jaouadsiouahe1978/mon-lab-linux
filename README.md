@@ -1,119 +1,184 @@
 # 🚀 Mon Voyage Linux - 365 Jours pour Devenir Admin Système
 
+> **Mission :** Transformer 365 jours de pratique quotidienne sur infrastructure réelle en compétences DevOps solides et vérifiables.
+
+---
+
 ## 👋 Salut !
 
-Je m'appelle Jaouad et voici mon journal d'apprentissage Linux. Je vais documenter chaque jour pendant un an tout ce que j'apprends sur l'administration système Linux.
+Je m'appelle **Jaouad Siouahe** et voici mon journal d'apprentissage Linux. Je vais documenter chaque jour pendant un an tout ce que j'apprends sur l'administration système Linux.
 
-### Pourquoi ce projet ?
+📍 **Localisation :** Grenoble, France  
+🎯 **Objectif :** Maîtriser la stack DevOps complète  
+💼 **Parcours :** Admin Système → DevOps Engineer  
 
-J'ai un serveur Dell PowerEdge T310 qui prend la poussière. Je veux apprendre à vraiment maîtriser Linux et construire une vraie infrastructure comme en prod. Au lieu de juste lire des tutos, je vais **FAIRE** et **DOCUMENTER** tout.
+---
 
-### Mon niveau de départ
+## 🎯 Pourquoi ce projet ?
 
-Je ne suis pas débutant total, mais je ne maîtrise pas tout. J'ai des bases en Linux mais il me manque plein de choses. Ce projet c'est pour combler ces trous.
+J'ai un serveur **Dell PowerEdge T310** qui prend la poussière. Je veux apprendre à vraiment maîtriser Linux et construire une vraie infrastructure comme en production. 
 
-### Mon matériel
+Au lieu de juste lire des tutos, je vais **FAIRE** et **DOCUMENTER** tout, publiquement.
 
-**Serveur :** Dell PowerEdge T310
-- **RAM :** 16 GB
-- **Disques :**
-  - sda : 931 GB (je vais l'utiliser plus tard)
-  - sdb : 279 GB (là où j'ai installé le système)
-  - sdc : 279 GB (pour les données)
-  - sdd : 279 GB (pour les backups et VMs)
+### Ce qui rend ce projet différent
 
-**OS actuel :** Ubuntu Server (mais je vais peut-être tester Rocky Linux)
+✅ **Infrastructure physique réelle** - Pas de simulations, de vrais serveurs  
+✅ **Documentation publique** - Transparence totale sur ma progression  
+✅ **Apprentissage en action** - Je construis, je casse, je répare  
+✅ **Portfolio vivant** - Preuves concrètes de mes compétences  
 
-### Mon planning
+---
 
-- **Durée :** 12 mois (365 jours)
-- **Temps par jour :** 2 à 4 heures
-- **Publication :** Je mets à jour GitHub tous les jours
+## 💻 Mon Matériel - Dell PowerEdge T310
 
-## 🗓️ Ce que je vais apprendre mois par mois
+| Composant | Spécifications | Utilisation Prévue |
+|-----------|----------------|-------------------|
+| **Serveur** | Dell PowerEdge T310 (Gen 11) | Lab production-ready |
+| **CPU** | Intel Xeon | Calcul pour VMs/conteneurs |
+| **RAM** | 16 GB DDR3 ECC | ~10-15 VMs ou conteneurs |
+| **Réseau** | 2× Gigabit Ethernet | Bonding/Failover |
+| **Stockage** | **Total : 1.7 TB** | Configuration détaillée ⬇️ |
 
-### Mois 1-2 : Les Bases Solides
-J'apprends à installer et configurer un serveur proprement :
-- Partitionnement avec LVM
-- Configuration réseau
-- Sécurité SSH et firewall
-- Mes premiers scripts
+### Configuration Disques Détaillée
 
-### Mois 3-4 : Les Services de Base
-Je monte mes premiers services :
-- Un serveur web (Nginx)
-- Des bases de données (PostgreSQL, MariaDB)
-- Un serveur DNS
-- Un serveur mail
+```
+💿 sda : 931 GB     → LVM pour machines virtuelles (prévu)
+💿 sdb : 279 GB     → Système Ubuntu 24.04 actuel
+   ├─ sdb1 : 1 GB   → Boot EFI
+   └─ sdb2 : 278 GB → Système (250 GB libres !)
+💿 sdc : 279 GB     → Données persistantes (bases de données)
+💿 sdd : 279 GB     → Backups automatiques et snapshots
+```
 
-### Mois 5-6 : Surveiller mon Infrastructure
-J'apprends à monitorer :
-- Prometheus et Grafana
-- Les logs avec ELK
-- Des alertes automatiques
+**État actuel :**  
+✅ sdb installé et fonctionnel (4% utilisé)  
+🔜 sda/sdc/sdd vierges, prêts pour LVM/RAID
 
-### Mois 7-8 : Automatiser Tout
-Je me lance dans l'automation :
-- Ansible pour automatiser
-- Terraform pour gérer l'infra
-- GitLab pour le CI/CD
+### OS et Configuration Réseau
 
-### Mois 9-10 : Les Conteneurs
-Je découvre Docker et Kubernetes :
-- Docker de A à Z
-- Kubernetes (K3s pour commencer)
-- Créer mes propres images
+**Système d'exploitation :** Ubuntu 24.04.1 LTS (Noble Numbat)  
+**Kernel :** Linux (version récente)  
+**Réseau :**
+- eno1 : 192.168.1.135/24 (interface primaire)
+- eno2 : 192.168.1.136/24 (interface secondaire)
 
-### Mois 11-12 : Niveau Production
-Je finis en beauté :
-- Haute disponibilité
+**Décision à prendre :** Migrer vers Rocky Linux ou rester sur Ubuntu ? (Jour 2)
+
+---
+
+## 🧠 Mon Niveau de Départ (Honnêtement)
+
+Je ne suis **pas débutant total**, mais je ne maîtrise **pas tout non plus**.
+
+### ✅ Ce que je connais déjà
+- Commandes Linux de base (ls, cd, cp, mv, grep)
+- Installation d'Ubuntu Server
+- Connexion SSH
+- apt-get pour installer des packages
+- Notions de réseau (IP, masque, gateway)
+
+### ❌ Ce qui me manque (et que je vais apprendre)
+- LVM et gestion avancée des disques
+- Sécurisation complète d'un serveur
+- Ansible et automatisation
+- Docker et Kubernetes en profondeur
+- Monitoring avec Prometheus/Grafana
+- CI/CD avec GitLab
+- Haute disponibilité et load balancing
+
+**Ce projet comble ces trous, un jour à la fois.**
+
+---
+
+## 🗓️ Planning Détaillé - 12 Mois
+
+### 📅 Mois 1-2 : Les Fondations Linux Solides
+
+**Objectif :** Maîtriser les bases indispensables avant d'aller plus loin.
+
+**Semaine 1 : Audit & Préparation**
+- [x] Jour 1 : Audit complet du serveur (30 novembre 2025) ✅
+- [ ] Jour 2-3 : Installation Rocky Linux + LVM
+- [ ] Jour 4-5 : Configuration RAID logiciel
+- [ ] Jour 6-7 : Documentation infrastructure complète
+
+**Semaine 2 : Sécurité & Réseau**
+- Hardening SSH (clés, 2FA, fail2ban)
+- Configuration firewall (iptables/nftables)
+- VLANs et isolation réseau
+- VPN avec WireGuard
+
+**Semaine 3 : Scripting & Automatisation**
+- Bash scripting avancé
+- Scripts de monitoring
+- Gestion des logs (rsyslog)
+- Rotation et archivage automatiques
+
+**Semaine 4 : Services Système**
+- Systemd approfondi (units, timers)
+- Cron jobs intelligents
+- Gestion des packages avancée
+- Compilation depuis les sources
+
+---
+
+### 📅 Mois 3-4 : Les Services de Base
+
+**Objectif :** Monter une infrastructure web complète.
+
+**Services Web**
+- Nginx : configuration avancée
+- Apache : comparaison et use cases
+- Reverse proxy et load balancing
+- SSL/TLS avec Let's Encrypt
+
+**Bases de Données**
+- PostgreSQL : installation et tuning
+- MariaDB/MySQL : réplication
+- Redis : cache et sessions
 - Backups automatiques
-- Plan de disaster recovery
-- Sécurité avancée
 
-## 📂 Comment j'organise mon GitHub
-
-\`\`\`
-mon-lab-linux/
-├── README.md                    # Tu es ici !
-├── docs/
-│   ├── mois-01/                 # Mes docs mois par mois
-│   ├── mois-02/
-│   └── ...
-├── configs/                     # Mes fichiers de config
-├── scripts/                     # Mes scripts
-├── ansible/                     # Mes playbooks
-├── docker/                      # Mes Dockerfiles
-└── journal/                     # Mon journal quotidien
-    └── 2024-12/
-        ├── jour-01.md
-        ├── jour-02.md
-        └── ...
-\`\`\`
-
-## 📝 Comment suivre mon apprentissage
-
-- **Par mois :** Va dans \`docs/mois-XX/\`
-- **Par jour :** Regarde dans \`journal/\`
-- **Les configs :** C'est dans \`configs/\`
-
-## 💬 Tu veux échanger ?
-
-Si toi aussi tu apprends Linux ou si tu as des conseils :
-- Ouvre une issue pour poser une question
-- Propose des améliorations
-- Partage ton expérience
-
-## ⚠️ Important
-
-Je ne suis pas un expert ! Je partage mon apprentissage avec mes erreurs et mes réussites. Si tu vois une erreur, dis-le moi gentiment 😊
+**Autres Services**
+- Serveur DNS (Bind9 ou dnsmasq)
+- Serveur Mail (Postfix + Dovecot)
+- FTP/SFTP sécurisé
+- NFS pour partage de fichiers
 
 ---
 
-**Démarré le :** 30 Novembre 2025  
-**Où j'en suis :** 🟢 Mois 1 - Les fondations  
-**Dernière mise à jour :** 30/11/2025
+### 📅 Mois 5-6 : Monitoring & Observabilité
+
+**Objectif :** Surveiller tout mon infrastructure.
+
+**Stack Prometheus + Grafana**
+- Installation et configuration
+- Collecte de métriques système
+- Dashboards personnalisés
+- Alertes intelligentes avec AlertManager
+
+**Stack ELK (Logging)**
+- Elasticsearch pour stockage
+- Logstash pour parsing
+- Kibana pour visualisation
+- Filebeat pour collecte
+
+**Autres Outils**
+- Nagios/Icinga pour checks classiques
+- Netdata pour monitoring temps réel
+- Uptime Kuma pour status pages
 
 ---
 
-> 💡 **Note :** J'ai aussi un autre projet GitHub sur le dépannage Linux. Si tu cherches des solutions à des pannes, va voir là-bas !
+### 📅 Mois 7-8 : Automatisation Infrastructure
+
+**Objectif :** "Infrastructure as Code" complet.
+
+**Ansible**
+- Playbooks : syntaxe et structure
+- Roles et Galaxy
+- Templates Jinja2
+- Ansible Vault pour secrets
+- Automatisation complète du lab
+
+**Terraform**
+- Providers et
